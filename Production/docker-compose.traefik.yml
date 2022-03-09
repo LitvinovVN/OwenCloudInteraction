@@ -35,6 +35,7 @@ services:
        - "traefik.http.routers.owencloudinteractionblazorui.entrypoints=websecure"
        - "traefik.http.routers.owencloudinteractionblazorui.tls.certresolver=myresolver"
        - "traefik.http.routers.owencloudinteractionblazorui.middlewares=test-compress,test-errorpages"
+       - "traefik.http.services.owencloudinteractionblazorui.loadbalancer.server.scheme=https"
        - "traefik.http.services.owencloudinteractionblazorui.loadbalancer.server.port=443"
        - "traefik.http.middlewares.test-compress.compress=true"
        - "traefik.http.middlewares.test-errorpages.errors.status=400-599"
