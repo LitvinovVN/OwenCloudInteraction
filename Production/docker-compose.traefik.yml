@@ -24,18 +24,18 @@ services:
       - ./traefik.metrics.yml:/etc/traefik/traefik.yml
       
 # Add the blazorapp test service http
-  blazorapp1:
-     image: litvinovvn/blazorapp1
+  owencloudinteractionblazorui:
+     image: litvinovvn/owencloudinteractionblazorui
      networks:
       - inbound
      deploy:
       labels:
-       - "traefik.http.routers.blazorapp1.rule=Host(`blazor.storage.achii.fvds.ru`)"
-       - "traefik.http.routers.blazorapp1.service=blazorapp1"
-       - "traefik.http.routers.blazorapp1.entrypoints=websecure"
-       - "traefik.http.routers.blazorapp1.tls.certresolver=myresolver"
-       - "traefik.http.routers.blazorapp1.middlewares=test-compress,test-errorpages"
-       - "traefik.http.services.blazorapp1.loadbalancer.server.port=80"
+       - "traefik.http.routers.owencloudinteractionblazorui.rule=Host(`owencloud.achii.fvds.ru`)"
+       - "traefik.http.routers.owencloudinteractionblazorui.service=owencloudinteractionblazorui"
+       - "traefik.http.routers.owencloudinteractionblazorui.entrypoints=websecure"
+       - "traefik.http.routers.owencloudinteractionblazorui.tls.certresolver=myresolver"
+       - "traefik.http.routers.owencloudinteractionblazorui.middlewares=test-compress,test-errorpages"
+       - "traefik.http.services.owencloudinteractionblazorui.loadbalancer.server.port=80"
        - "traefik.http.middlewares.test-compress.compress=true"
        - "traefik.http.middlewares.test-errorpages.errors.status=400-599"
        - "traefik.http.middlewares.test-errorpages.errors.service=error"
