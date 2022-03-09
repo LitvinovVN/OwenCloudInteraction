@@ -1,2 +1,2 @@
 cd ..
-docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
+docker stack deploy -c docker-compose.yml docker-compose.override.yml
