@@ -28,6 +28,9 @@ services:
      image: litvinovvn/owencloudinteractionblazorui
      networks:
       - inbound
+     environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=https://+:443;http://+:80
      deploy:
       labels:
        - "traefik.http.routers.owencloudinteractionblazorui.rule=Host(`owencloud.achii.fvds.ru`)"
