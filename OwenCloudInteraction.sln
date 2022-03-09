@@ -20,11 +20,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{AD6889BC-5915-4789-B8A0-7E0450275C75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwenCloudInteraction.UI.BlazorWASM.Server", "Source\Presentation\OwenCloudInteraction.UI.BlazorWASM\Server\OwenCloudInteraction.UI.BlazorWASM.Server.csproj", "{5E7A8E15-0C5F-4775-8838-E2CEF85B00BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OwenCloudInteraction.UI.BlazorWASM.Server", "Source\Presentation\OwenCloudInteraction.UI.BlazorWASM\Server\OwenCloudInteraction.UI.BlazorWASM.Server.csproj", "{5E7A8E15-0C5F-4775-8838-E2CEF85B00BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwenCloudInteraction.UI.BlazorWASM.Client", "Source\Presentation\OwenCloudInteraction.UI.BlazorWASM\Client\OwenCloudInteraction.UI.BlazorWASM.Client.csproj", "{0232C747-8A3E-49E4-99A7-AB2DE194F70D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OwenCloudInteraction.UI.BlazorWASM.Client", "Source\Presentation\OwenCloudInteraction.UI.BlazorWASM\Client\OwenCloudInteraction.UI.BlazorWASM.Client.csproj", "{0232C747-8A3E-49E4-99A7-AB2DE194F70D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwenCloudInteraction.UI.BlazorWASM.Shared", "Source\Presentation\OwenCloudInteraction.UI.BlazorWASM\Shared\OwenCloudInteraction.UI.BlazorWASM.Shared.csproj", "{B4C3EAE0-74BC-4F9C-B003-B3F7A684B157}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OwenCloudInteraction.UI.BlazorWASM.Shared", "Source\Presentation\OwenCloudInteraction.UI.BlazorWASM\Shared\OwenCloudInteraction.UI.BlazorWASM.Shared.csproj", "{B4C3EAE0-74BC-4F9C-B003-B3F7A684B157}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{CB183694-B1BD-4512-8004-BE736EF981B1}"
 EndProject
