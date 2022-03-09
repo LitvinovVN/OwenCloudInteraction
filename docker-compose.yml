@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  owencloudinteraction.ui.blazorwasm.server:
+    image: ${DOCKER_REGISTRY-}litvinovvn/owencloudinteractionblazorui
+    build:
+      context: .
+      dockerfile: Source/Presentation/OwenCloudInteraction.UI.BlazorWASM/Server/Dockerfile

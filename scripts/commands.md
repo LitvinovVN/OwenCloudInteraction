@@ -1,0 +1,1 @@
+docker run --rm -p 5001:443 litvinovvn/owencloudinteractionblazorui
