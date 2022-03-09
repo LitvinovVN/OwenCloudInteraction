@@ -1,2 +1,2 @@
 cd ..
-docker stack deploy -c docker-compose.yml -c docker-compose.override.yml OwenCloudInteractionNetwork
+docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
