@@ -17,8 +17,8 @@ jobs:
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
       - name: Install dependencies
-        run: dotnet restore ./Source/Presentation/OwenCloudInteraction.UI.BlazorWASM/Server/OwenCloudInteraction.UI.BlazorWASM.Server.csproj
+        run: dotnet restore ./OwenCloudInteraction.sln
       - name: Build
-        run: dotnet build ./Source/Presentation/OwenCloudInteraction.UI.BlazorWASM/Server/OwenCloudInteraction.UI.BlazorWASM.Server.csproj --configuration Release --no-restore
+        run: dotnet build ./OwenCloudInteraction.sln --configuration Release --no-restore
       - name: Test
-        run: dotnet test ./Source/Presentation/OwenCloudInteraction.UI.BlazorWASM/Server/OwenCloudInteraction.UI.BlazorWASM.Server.csproj --no-restore --verbosity normal
+        run: dotnet test ./OwenCloudInteraction.sln --no-restore --verbosity normal
