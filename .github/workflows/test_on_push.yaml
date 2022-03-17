@@ -11,7 +11,8 @@ jobs:
         dotnet-version: [ '6.0.x' ]
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Check out code
+        uses: actions/checkout@v2        
       - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
         uses: actions/setup-dotnet@v1.7.2
         with:
@@ -21,4 +22,13 @@ jobs:
       - name: Build
         run: dotnet build ./OwenCloudInteraction.sln --configuration Release --no-restore
       - name: Test
-        run: dotnet test ./OwenCloudInteraction.sln --no-restore --verbosity normal
+        run: dotnet test ./OwenCloudInteraction.sln --no-restore --verbosity normal      
+      - name: Build & push Docker image
+        uses: mr-smithers-excellent/docker-build-push@v5        
+        with:
+          image: litvinovvn/owencloudinteractionblazorui
+          tags: v1, latest
+          registry: docker.io
+          dockerfile: ./Source/Presentation/OwenCloudInteraction.UI.BlazorWASM/Server/Dockerfile
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
