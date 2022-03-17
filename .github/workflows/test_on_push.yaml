@@ -39,7 +39,7 @@ jobs:
           username: ${{ secrets.PROD_USERNAME }}
           password: ${{ secrets.PROD_PASSWORD }}
           port: ${{ secrets.PROD_PORT }}
-          script: |
+          script: |            
+            cd OwenCloudInteraction/Production
             git pull
-            cd OwenCloudInteraction/Production            
             bash swarmStart.sh
